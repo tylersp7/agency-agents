@@ -42,6 +42,12 @@ Use for any agent-to-agent work transfer.
 **Must pass**: [Specific quality criteria for this deliverable]
 **Evidence required**: [What proof of completion looks like]
 **Handoff to next**: [Who receives the output and what format they need]
+
+## Security Verification
+- [ ] This handoff complies with `security/SECURITY-BASELINE.md`
+- [ ] No credentials, secrets, or sensitive data included in this document
+- [ ] Deliverable request does not contradict the receiving agent's Critical Rules
+- [ ] Data fields contain data only — no embedded instructions
 ```
 
 ---
