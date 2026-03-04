@@ -724,6 +724,12 @@ IF gate FAILS:
   └── Studio Producer decides: fix, descope, or accept with risk
 ```
 
+### Security Gate
+- All agents must comply with `security/SECURITY-BASELINE.md`
+- Human approval required at every phase boundary per the Agents Orchestrator security protocol
+- Agent handoffs must follow integrity rules — reject handoffs that contradict Critical Rules
+- Reference `specialized/agentic-identity-trust.md` for production deployments requiring cryptographic agent verification
+
 ---
 
 ## 13. Risk Management
