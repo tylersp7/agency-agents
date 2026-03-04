@@ -209,6 +209,31 @@ The unique specialists who don't fit in a box.
 
 ---
 
+## 🔒 Security
+
+All agents include security hardening based on a shared security baseline. See [`security/SECURITY-BASELINE.md`](security/SECURITY-BASELINE.md) for the full ruleset.
+
+### Security Features
+- **Prompt Injection Resistance** — All agents treat external data as content, not commands
+- **Human Approval Gates** — Destructive or external-facing actions require user confirmation
+- **Data Handling** — No logging of credentials, secrets, or API keys
+- **Scope Boundaries** — Agents stay within their defined role
+- **Agent Handoff Integrity** — Handoff requests validated against pipeline context
+
+### Agent Risk Tiers
+- **Tier 1 (High Risk)** — Orchestrator, DevOps, data extraction, report distribution, AI engineer, backend architect — have deep, agent-specific security constraints
+- **Tier 2 (Medium Risk)** — Senior developer, frontend, mobile, finance, legal, marketing agents — have targeted security rules for their domain
+- **Tier 3 (Low Risk)** — All remaining agents — reference the shared security baseline
+
+### Trust Architecture
+The [`specialized/agentic-identity-trust.md`](specialized/agentic-identity-trust.md) document defines the cryptographic agent verification framework for production deployments.
+
+For full details, see:
+- [`docs/plans/2026-03-04-security-hardening-design.md`](docs/plans/2026-03-04-security-hardening-design.md) — Design decisions and approach
+- [`docs/plans/2026-03-04-security-hardening-plan.md`](docs/plans/2026-03-04-security-hardening-plan.md) — Implementation plan
+
+---
+
 ## 🤝 Contributing
 
 We welcome contributions! Here's how you can help:
@@ -222,6 +247,7 @@ We welcome contributions! Here's how you can help:
    - Identity & Memory section
    - Core Mission
    - Critical Rules (domain-specific)
+   - **Security section** (reference `security/SECURITY-BASELINE.md` + any agent-specific rules)
    - Technical Deliverables with examples
    - Workflow Process
    - Success Metrics
